@@ -14,10 +14,10 @@
   - [x] SubTask 2.2: 说明运行部署命令与查看日志的方式
   - [x] SubTask 2.3: 补充通用失败处理与下一步指引
 
-- [ ] Task 3: 完成 Windows（WSL2 优先）部署指南与脚本
-  - [ ] SubTask 3.1: 编写 Windows/WSL2 前置条件、安装、启动、验证文档
-  - [ ] SubTask 3.2: 提供 Windows 入口脚本（可为 PowerShell 包装 WSL 或 WSL 内脚本入口）
-  - [ ] SubTask 3.3: 添加 Windows 常见问题排查项
+- [x] Task 3: 完成 Windows（WSL2 优先）部署指南与脚本
+  - [x] SubTask 3.1: 编写 Windows/WSL2 前置条件、安装、启动、验证文档
+  - [x] SubTask 3.2: 提供 Windows 入口脚本（可为 PowerShell 包装 WSL 或 WSL 内脚本入口）
+  - [x] SubTask 3.3: 添加 Windows 常见问题排查项
 
 - [ ] Task 4: 完成 macOS 部署指南与脚本
   - [ ] SubTask 4.1: 编写 macOS 前置条件、安装、启动、验证文档
