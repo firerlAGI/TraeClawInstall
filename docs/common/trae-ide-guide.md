@@ -111,3 +111,16 @@ which openclaw
 1. 先完成本通用指南。
 2. 再进入对应平台文档执行平台特有步骤。
 3. 若平台步骤失败，回到本指南“失败处理流程”做统一基线检查。
+
+## 示例配置（无密钥）
+
+- 示例文件：`examples/.env.example`
+- 当前字段说明：
+  - `OPENCLAW_HOME`：OpenClaw 的 home 路径（可选）
+  - `OPENCLAW_STATE_DIR`：可变状态目录（可选）
+  - `OPENCLAW_CONFIG_PATH`：配置文件路径（可选）
+
+生效验证方式：
+1. 在当前终端导出你需要的变量
+2. 运行 `openclaw doctor`
+3. 运行 `openclaw status`

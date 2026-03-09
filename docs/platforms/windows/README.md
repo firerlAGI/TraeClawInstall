@@ -110,3 +110,9 @@ Set-ExecutionPolicy -Scope Process Bypass
 - **`npm install -g` 权限问题**：优先使用 nvm（Node 安装在用户目录），避免 sudo 安装 Node。
 - **在 `/mnt/c/...` 下运行很慢或权限异常**：建议把仓库 clone 到 WSL 的 Linux 文件系统（如 `~/Projects/Traeclaw`）再执行脚本。
 - **DNS/网络导致安装失败**：先确认 WSL 能访问外网（如 `curl https://registry.npmjs.org/`），必要时配置代理或切换网络。
+
+## 统一排障入口
+
+- 最小验收标准：`docs/common/acceptance.md`
+- 统一排障总表：`docs/common/troubleshooting.md`
+- FAQ：`docs/common/faq.md`

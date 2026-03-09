@@ -2,6 +2,9 @@
 .idea/
 .vscode/
 
+# Trae local workspace
+.trae/
+
 # Node
 node_modules/
 npm-debug.log*
@@ -19,4 +22,3 @@ logs/
 *.log
 dist/
 build/
-

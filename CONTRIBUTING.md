@@ -14,6 +14,5 @@
 ## 目录约定
 
 - 新增文档：优先放在 `docs/common/` 或 `docs/platforms/<platform>/`
-- 新增脚本：与文档保持镜像结构，放在 `scripts/<platform>/` 或 `scripts/common/`
+- 新增脚本：与文档保持镜像结构，优先放在 `scripts/<platform>/`；仅跨平台公共逻辑放 `scripts/common/`
 - 示例配置：只允许放示例（不得提交真实密钥），放在 `examples/`
-

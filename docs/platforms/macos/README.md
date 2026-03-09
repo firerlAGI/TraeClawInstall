@@ -91,3 +91,9 @@ bash scripts/macos/check.sh --dashboard
 - **`npm install -g` 报权限错误（EACCES）**：优先使用 nvm 方案；或检查是否用 Homebrew 安装 Node 且全局目录权限异常。
 - **`openclaw status` 连不上 / daemon 未启动**：先执行 `bash scripts/macos/setup.sh` 重新跑 `openclaw onboard --install-daemon`，再执行 `bash scripts/macos/start.sh`。
 - **后台进程被系统拦截**：检查「系统设置 → 通用 → 登录项与扩展（后台项目）」里是否需要允许相关后台项。
+
+## 统一排障入口
+
+- 最小验收标准：`docs/common/acceptance.md`
+- 统一排障总表：`docs/common/troubleshooting.md`
+- FAQ：`docs/common/faq.md`

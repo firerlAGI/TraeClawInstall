@@ -14,14 +14,22 @@ function Convert-ToWslPath {
   throw "无法将路径转换为 WSL 路径：$full"
 }
 
+function Quote-BashSingle {
+  param([Parameter(Mandatory = $true)][string]$Value)
+
+  $escaped = $Value -replace "'", "'\"'\"'"
+  return "'" + $escaped + "'"
+}
+
 if (-not (Get-Command wsl.exe -ErrorAction SilentlyContinue)) {
   throw "未找到 wsl.exe。请先安装/启用 WSL2：wsl --install"
 }
 
 $RepoRootWin = Resolve-Path (Join-Path $PSScriptRoot "..\..")
 $RepoRootWsl = Convert-ToWslPath $RepoRootWin
+$RepoRootWslQuoted = Quote-BashSingle $RepoRootWsl
 
 Write-Host "[setup.ps1] repo(win): $($RepoRootWin.Path)"
 Write-Host "[setup.ps1] repo(wsl): $RepoRootWsl"
 
-wsl.exe -e bash -lc "cd '$RepoRootWsl' && bash scripts/windows/wsl/setup.sh"
+wsl.exe -e bash -lc "cd $RepoRootWslQuoted && bash scripts/windows/wsl/setup.sh"
