@@ -124,3 +124,80 @@ which openclaw
 1. 在当前终端导出你需要的变量
 2. 运行 `openclaw doctor`
 3. 运行 `openclaw status`
+
+## 安全基线配置（AI 智能体可执行）
+
+### 目标
+
+- 在安装第三方 skill 前，先完成来源与扫描结果核验。
+- 在本机或服务器上，先完成一次 OpenClaw 安全基线体检。
+
+### 输入与输出约定
+
+#### 输入
+
+- 已安装 OpenClaw CLI，且 `openclaw --version` 可用。
+- 已安装或可通过 `npx` 调用 ClawHub CLI。
+
+#### 输出
+
+- 通过：待安装 skill 的扫描结果可见且风险可接受；`openclaw security audit` 无阻断级问题。
+- 失败：任一项无法通过时，停止上线并先修复阻断项。
+
+### SOP-A：ClawHub + VirusTotal 扫描核验（安装前）
+
+1. 先搜索候选 skill：
+
+```bash
+clawhub search "security"
+```
+
+2. 查看目标 skill 详情与元信息：
+
+```bash
+clawhub inspect <skill-slug>
+```
+
+3. 在 ClawHub 技能页面确认扫描状态：
+   - 优先 `benign`
+   - 若为 `suspicious` 或 `malicious`，停止安装
+4. 仅在核验通过后执行安装：
+
+```bash
+npx clawhub@latest install <skill-slug>
+```
+
+判定规则：
+- 无扫描信息或来源不明：按高风险处理，不安装。
+- 需要额外下载不透明二进制或执行未知脚本：按高风险处理，不安装。
+
+### SOP-B：openclaw security audit 本地体检
+
+1. 先执行标准审计：
+
+```bash
+openclaw security audit
+```
+
+2. 再执行深度审计：
+
+```bash
+openclaw security audit --deep
+```
+
+3. 若有可自动修复项，可先预览后修复：
+
+```bash
+openclaw security audit --fix
+```
+
+验收标准：
+- 阻断级风险为 0。
+- 网关暴露、认证缺失、危险配置开关等关键项已处理。
+- 修复后重复执行 `openclaw security audit --deep`，结果稳定。
+
+### 失败处理
+
+1. 记录首条报错与对应命令。
+2. 回退最近新增 skill 或配置改动。
+3. 再次执行 `openclaw security audit --deep` 验证回退后状态。

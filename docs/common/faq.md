@@ -39,3 +39,27 @@
 ## Q10：从哪里开始最快？
 
 答：先看仓库根 README 的“快速开始”，再看 `docs/common/trae-ide-guide.md`，最后进入你的平台文档。
+
+## Q11：`docker-compose` 能用，但 `docker compose` 报错怎么办？
+
+答：优先确保你使用的是 Docker Compose v2（推荐通过 Docker Desktop 安装）。不少教程还在写 v1 命令，当前主流文档以 `docker compose`（空格）为准。
+
+## Q12：为什么 Docker 场景会出现 `exit 137` 或构建中断？
+
+答：常见是内存不足。OpenClaw 官方 Docker 文档建议镜像构建至少预留 2GB 内存；若资源偏小，`pnpm install` 阶段容易被系统 OOM 杀掉。
+
+## Q13：Docker 部署里 OAuth 回调页报错是不是失败了？
+
+答：不一定。在 Docker/无头环境里，OpenAI Codex OAuth 回调页可能显示浏览器错误；按官方说明复制最终重定向 URL 回贴到向导，通常可继续完成授权。
+
+## Q14：`npm install -g openclaw@latest` 遇到 EACCES，最稳妥怎么处理？
+
+答：优先用 nvm 这类 Node 版本管理器，让 npm 全局目录落在用户目录，避免 sudo 安装带来的权限后遗症；这是 npm 官方推荐路径。
+
+## Q15：`openclaw` 安装后命令仍找不到，最容易漏哪一步？
+
+答：最常漏的是全局 npm bin 目录没有进入 PATH。先执行 `npm prefix -g` 和 `echo "$PATH"` 对照检查；修正 shell 配置后需重开终端再试。
+
+## Q16：Docker 模式下一直“连接不上”或反复要求配对，先看什么？
+
+答：先确认网关访问地址是否仍是本机回环（如 `127.0.0.1:18789`）以及 bind/mode 是否被改偏；再用 `devices list` 检查是否存在待审批设备请求。
