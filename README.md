@@ -43,6 +43,7 @@ openclaw dashboard
 
 ## Trae IDE 使用路径
 
+- 通用指南：`docs/common/trae-ide-guide.md`
 - 在 Trae IDE 打开仓库根目录
 - 在内置终端执行 `scripts/` 下对应平台脚本
 - 失败时先执行 `openclaw doctor`，再回到对应平台文档排障

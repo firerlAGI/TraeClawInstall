@@ -9,10 +9,10 @@
   - [x] SubTask 1.2: 创建 docs、scripts、examples 目录骨架
   - [x] SubTask 1.3: 在 README 提供分平台导航与快速开始入口
 
-- [ ] Task 2: 编写 Trae IDE 通用使用指南
-  - [ ] SubTask 2.1: 说明在 Trae IDE 中打开项目与终端
-  - [ ] SubTask 2.2: 说明运行部署命令与查看日志的方式
-  - [ ] SubTask 2.3: 补充通用失败处理与下一步指引
+- [x] Task 2: 编写 Trae IDE 通用使用指南
+  - [x] SubTask 2.1: 说明在 Trae IDE 中打开项目与终端
+  - [x] SubTask 2.2: 说明运行部署命令与查看日志的方式
+  - [x] SubTask 2.3: 补充通用失败处理与下一步指引
 
 - [ ] Task 3: 完成 Windows（WSL2 优先）部署指南与脚本
   - [ ] SubTask 3.1: 编写 Windows/WSL2 前置条件、安装、启动、验证文档
