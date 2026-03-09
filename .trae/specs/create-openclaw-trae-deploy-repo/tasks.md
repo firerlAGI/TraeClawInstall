@@ -19,10 +19,10 @@
   - [x] SubTask 3.2: 提供 Windows 入口脚本（可为 PowerShell 包装 WSL 或 WSL 内脚本入口）
   - [x] SubTask 3.3: 添加 Windows 常见问题排查项
 
-- [ ] Task 4: 完成 macOS 部署指南与脚本
-  - [ ] SubTask 4.1: 编写 macOS 前置条件、安装、启动、验证文档
-  - [ ] SubTask 4.2: 提供 setup.sh、start.sh、check.sh
-  - [ ] SubTask 4.3: 添加 macOS 常见问题排查项
+- [x] Task 4: 完成 macOS 部署指南与脚本
+  - [x] SubTask 4.1: 编写 macOS 前置条件、安装、启动、验证文档
+  - [x] SubTask 4.2: 提供 setup.sh、start.sh、check.sh
+  - [x] SubTask 4.3: 添加 macOS 常见问题排查项
 
 - [ ] Task 5: 完成 Linux 部署指南与脚本
   - [ ] SubTask 5.1: 编写 Linux 前置条件、安装、启动、验证文档
