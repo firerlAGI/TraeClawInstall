@@ -8,6 +8,7 @@
 
 ## 0. 基础环境（必选）
 
+- [ ] 先判断当前系统：Windows / macOS / Linux（Windows 优先走 WSL2）
 - [ ] 在 Trae IDE 中打开仓库根目录
 - [ ] 可用终端正常（Windows 推荐 WSL2）
 - [ ] `node --version` 主版本 `>= 22`
