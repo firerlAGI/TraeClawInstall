@@ -1,5 +1,7 @@
 # OpenClaw Trae IDE 跨平台部署仓库
 
+Fire 和 Trae IDE 共同设计本仓库，由Trae完成代码开发，在此致谢。
+
 只需要会四件事：
 
 1. 在 Trae IDE 中新建一个项目。  
