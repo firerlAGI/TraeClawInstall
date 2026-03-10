@@ -1,0 +1,20 @@
+{
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "dmPolicy": "pairing",
+      "groupPolicy": "open",
+      "typingIndicator": false,
+      "resolveSenderNames": false,
+      "accounts": {
+        "main": {
+          "appId": "cli_xxx",
+          "appSecret": "replace_with_real_secret",
+          "botName": "我的AI助手"
+        }
+      }
+    }
+  }
+}

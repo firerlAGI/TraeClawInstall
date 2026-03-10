@@ -74,28 +74,23 @@ openclaw pairing list feishu
 openclaw pairing approve feishu <CODE>
 ```
 
+## 仓库内程序与脚本
+
+- 验收脚本：`scripts/common/feishu-verify.sh`
+- 配置示例：`examples/openclaw.feishu.example.json`
+
+执行方式：
+
+```bash
+bash scripts/common/feishu-verify.sh
+```
+
 ## 文档脚本示例（用于验收与回归）
 
 > 下面脚本用于“改完配置后快速自检”，可直接复制到终端执行。
 
 ```bash
-#!/usr/bin/env bash
-set -euo pipefail
-
-echo "[1/5] 版本"
-openclaw --version
-
-echo "[2/5] 网关状态"
-openclaw gateway status || true
-
-echo "[3/5] 重启网关"
-openclaw gateway restart
-
-echo "[4/5] 插件状态（关注 feishu / feishu-openclaw-plugin）"
-openclaw plugins list
-
-echo "[5/5] 最近日志（检查是否有飞书事件入站）"
-openclaw logs --follow
+bash scripts/common/feishu-verify.sh
 ```
 
 使用建议：
