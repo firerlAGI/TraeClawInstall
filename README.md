@@ -1,10 +1,11 @@
 # OpenClaw Trae IDE 跨平台部署仓库
 
-只需要会四件事
-1.在Trae IDE中新建一个项目
-2.把本仓库的链接https://github.com/firerlAGI/TraeClawInstall 放在对话框中，说：”帮我下载这个仓库到本地“
-3.Trae IDE下载完成本仓库后，在TraeIDE的设置中将目录下的SKILL.md文件添加到技能列表中
-4.对Trae智能体说：“帮我部署openclaw到本地“
+只需要会四件事：
+
+1. 在 Trae IDE 中新建一个项目。  
+2. 把本仓库链接 `https://github.com/firerlAGI/TraeClawInstall` 放在对话框中，说：“帮我下载这个仓库到本地”。  
+3. Trae IDE 下载完成后，在 Trae IDE 设置中将仓库目录下的 `SKILL.md` 添加到技能列表。  
+4. 对 Trae 智能体说：“帮我部署 openclaw 到本地”。
 
 本项目为AI智能体阅读友好型，所有的文件都是AI智能体可以直接阅读并执行的，不需要用人类用户手动操作。
 
