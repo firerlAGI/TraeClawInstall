@@ -45,6 +45,7 @@ openclaw dashboard
 
 - 通用指南：`docs/common/trae-ide-guide.md`
 - AI 使用说明：`docs/common/ai-agent-usage.md`
+- 安装配置检查清单：`docs/common/install-config-checklist.md`
 - 最小验收标准：`docs/common/acceptance.md`
 - 统一排障：`docs/common/troubleshooting.md`
 - FAQ：`docs/common/faq.md`
